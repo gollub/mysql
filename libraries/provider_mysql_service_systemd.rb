@@ -5,8 +5,8 @@ class Chef
         action :start do
           # this script is called by the main systemd unit file, and
           # spins around until the service is actually up and running.
-          template "#{new_resource.name} :start /usr/libexec/#{mysql_name}-wait-ready" do
-            path "/usr/libexec/#{mysql_name}-wait-ready"
+          template "#{new_resource.name} :start /var/lib/#{mysql_name}-wait-ready" do
+            path "/var/lib/#{mysql_name}-wait-ready"
             source 'systemd/mysqld-wait-ready.erb'
             owner 'root'
             group 'root'
