@@ -393,7 +393,7 @@ EOSQL
       return '5.5' if node['platform_family'] == 'rhel' && node['platform_version'].to_i == 2014
       return '5.5' if node['platform_family'] == 'rhel' && node['platform_version'].to_i == 7
       return '5.5' if node['platform_family'] == 'smartos'
-      return '10.0.13' if node['platform_family'] == 'suse' && node['platform_version'].to_i == 13.2
+      return '10.0.13' if node['platform_family'] == 'suse' && node['platform_version'] == '13.2'
       return '5.5' if node['platform_family'] == 'suse'
     end
   end
